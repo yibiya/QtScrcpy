@@ -15,7 +15,7 @@
 #define COMMON_PUSHFILE_DEF "/sdcard/"
 
 #define COMMON_SERVER_VERSION_KEY "ServerVersion"
-#define COMMON_SERVER_VERSION_DEF "1.17"
+#define COMMON_SERVER_VERSION_DEF "1.21"
 
 #define COMMON_SERVER_PATH_KEY "ServerPath"
 #define COMMON_SERVER_PATH_DEF "/data/local/tmp/scrcpy-server.jar"
@@ -39,10 +39,10 @@
 #define COMMON_LOG_LEVEL_DEF "info"
 
 #define COMMON_CODEC_OPTIONS_KEY "CodecOptions"
-#define COMMON_CODEC_OPTIONS_DEF "-"
+#define COMMON_CODEC_OPTIONS_DEF ""
 
 #define COMMON_CODEC_NAME_KEY "CodecName"
-#define COMMON_CODEC_NAME_DEF "-"
+#define COMMON_CODEC_NAME_DEF ""
 
 // user config
 #define COMMON_RECORD_KEY "RecordPath"

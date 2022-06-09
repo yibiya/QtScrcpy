@@ -11,8 +11,6 @@
 
 QtScrcpy可以通过USB(或通过TCP/IP)连接Android设备，并进行显示和控制。不需要root权限。
 
-单个应用程序最多支持16个安卓设备同时连接。
-
 同时支持GNU/Linux，Windows和MacOS三大主流桌面平台
 
 它专注于:
@@ -175,7 +173,7 @@ Mac OS平台，你可以直接使用我编译好的可执行程序:
 - 屏幕录制
 - 截图为png
 - 无线连接
-- 最多支持16台设备连接（PC性能允许的情况下可以增加，需要自己编译）
+- 支持多台设备连接
 - 全屏显示
 - 窗口置顶
 - 安装apk：拖拽apk到视频窗口即可安装
@@ -244,9 +242,9 @@ Mac OS平台，你可以直接使用我编译好的可执行程序:
 
 ### PC端
 1. 在目标平台上搭建Qt开发环境
-我们建议使用最新的Qt5版本（5.15.2或更高）。在Windows上你可以自由选择MSVC 2019或MinGW 8.1.0，但需要注意的是现阶段只有**CMake**脚本提供了对MinGW的支持。
-2. 克隆该项目
-3. 使用QtCreator打开项目根目录`all.pro`或`CMakeLists.txt`
+Qt版本>=5.12（在Windows上使用MSVC 2019）
+2. 克隆该项目（git clone --recursive git@github.com:barry-ran/QtScrcpy.git）
+3. 使用QtCreator打开项目根目录`CMakeLists.txt`
 4. 编译，运行
 
 ### Android端 （没有修改需求的话直接使用自带的scrcpy-server即可）

@@ -12,8 +12,6 @@
 
 QtScrcpy connects to Android devices via USB (or via TCP/IP) for display and control. It does NOT require the root privileges.
 
-A single instance supports up to 16 Android device connections at the same time.
-
 It supports three major platforms: GNU/Linux, Windows and MacOS.
 
 It focuses on:
@@ -173,7 +171,7 @@ Note: it is not necessary to keep you Android device connected via USB after you
 - Screen recording
 - Screenshot to png
 - Wireless connection
-- Supports up to 16 device connections (the number can be higher if your PC performance allows. You need to compile it by yourself)
+- Supports multiple device connections
 - Full-screen display
 - Display on the top
 - Install apk: drag and drop apk to the video window to install
@@ -247,9 +245,9 @@ All the dependencies are provided and it is easy to compile.
 
 ### PC client
 1. Set up the Qt development environment on the target platform.
-An Up-to-date Qt5 (i.e. 5.15.2 or later) is recommended. For Windows, you can choose MSVC 2019 or MinGW 8.1.0, but please be noted that currently only **CMake** scripts support MinGW.
-2. Clone the project
-3. Open the project root directory `all.pro` or `CMakeLists.txt` with QtCreator
+Qt version>=5.12 (use MSVC 2019 on Windows)
+2. Clone the project (git clone --recursive git@github.com:barry-ran/QtScrcpy.git)
+3. Open the project root directory `CMakeLists.txt` with QtCreator
 4. Compile and run
 
 ### Android (If you do not have special requirements, you can directly use the built-in scrcpy-server.jar)
@@ -258,7 +256,7 @@ An Up-to-date Qt5 (i.e. 5.15.2 or later) is recommended. For Windows, you can ch
 2. Open server project in project root with Android Studio
 3. The first time you open it, if you do not have the corresponding version of gradle, you will be prompted to find gradle, whether to upgrade gradle and create it. Select Cancel. After canceling, you will be prompted to select the location of the existing gradle. You can also cancel it (it will download automatically).
 4. Edit the code as needed, but of course you do n’t need to.
-4. After compiling the apk, rename it to scrcpy-server and replace third_party/scrcpy-server.
+4. After compiling the apk, rename it to scrcpy-server and replace QtScrcpy/QtScrcpyCore/src/third_party/scrcpy-server.
 
 ## Licence
 Since it is based on scrcpy, respect its Licence
